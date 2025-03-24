@@ -1,0 +1,4 @@
+Django
+gunicorn
+mysqlclient
+pymysql ==1.1.1

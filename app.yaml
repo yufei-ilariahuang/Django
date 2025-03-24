@@ -1,0 +1,17 @@
+runtime: python310  # Match your conda environment Python version
+
+entrypoint: gunicorn -b :$PORT liaDjango.wsgi
+
+env_variables:
+  DJANGO_SETTINGS_MODULE: "liaDjango.settings"
+  DB_NAME: "DB_GROUP6"
+  DB_USER: "group6"
+  DB_PASSWORD: "group6"
+  DB_HOST: "35.233.202.203"
+  DB_PORT: "3306"
+
+handlers:
+- url: /static
+  static_dir: static/
+- url: /.*
+  script: auto
