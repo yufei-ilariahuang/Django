@@ -1,0 +1,1 @@
+web: gunicorn liaApp.wsgi:application --bind :$PORT
